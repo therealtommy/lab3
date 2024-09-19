@@ -29,8 +29,14 @@ class MainActivity : AppCompatActivity() {
             val strok2 = str2.text.toString()
 
             // Прямое добавление содержимого строки 2 в строку 1
-            str1.setText(strok1 + strok2)
-
+            // str1.setText(strok1 + strok2)
+            // Пробежка по строке 2, добавление в конец строки 1
+            val stringBuilder = StringBuilder(strok1)
+            for (char in strok2)
+            {
+                stringBuilder.append(char)
+            }
+            str1.setText(stringBuilder.toString())
 
         }
 
